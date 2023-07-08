@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+      {{form}}<hr>
+    <div>
+      <form method="get">
+        <label for="id_name">Name</label>
+        <input type="text" name="name" required id="id_name" />
+        <form/>
+        <div>
+          <form method="get">
+            <label for="{{form.name.id_for_label}}">Name</label>
+            {{form.name}}
+          </form>
+        </div>
+        <div>
+            <form method="get">
+            {{form.name.label_tag}}
+            {{form.name}}{{form.name.help_text}}
+            </form>
+        </div>
+        <div>
+
+            label:{{form.name.label}}<br>
+            value:{{form.name.value}}<br>
+            id_for_label:{{form.email.id_for_label}}<br>
+            {{form.name.field.required}}<br>
+            {{form.name}}
+        </div>
+    </div>
+  </body>
+</html>

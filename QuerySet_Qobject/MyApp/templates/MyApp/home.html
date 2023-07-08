@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <table border="1">
+      <thead>
+        <tr>
+          <td>ID</td>
+          <td>Name</td>
+          <td>Age</td>
+          <td>City</td>
+          <td>Dob</td>
+          <td>Marks</td>
+        </tr>
+        <tbody>
+          {% for st in stu %}
+            <tr>
+            <td>{{st.id}}</td>
+            <td>{{st.name}}</td>
+            <td>{{st.age}}</td>
+            <td>{{st.city}}</td>
+            <td>{{st.dob}}</td>
+            <td>{{st.marks}}</td>
+      </tr>
+      {% endfor %}
+        </tbody>
+      </thead>
+    </table>
+  </body>
+</html>
